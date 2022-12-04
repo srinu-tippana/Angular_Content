@@ -1,0 +1,55 @@
+<h3> The student list</h3>
+<ul *ngFor="let p of pupil ">
+    <li *ngIf="p.age>= 24; else template1">
+        Senior {{p.sname}}-->{{p.city}}-->{{p.age}}
+    </li>
+    <ng-template #template1 > 
+        <li *ngIf="p.age>=22; else template2">
+            Junior {{p.sname}}-->{{p.city}}-->{{p.age}}
+
+        </li>
+       
+    </ng-template>
+    <ng-template #template2> final else condition</ng-template>
+
+</ul>
+
+<hr>
+<hr>
+<div  [ngSwitch]="'Chicago'">
+<div *ngFor="let person of pupil" >
+    
+        
+    
+    <div *ngSwitchCase="person.city">{{person.sname}}-->{{person.city}}-->{{person.age}}</div>
+
+    
+
+
+</div>
+</div>
+<hr>
+<hr>
+
+<div [ngSwitch]="'Chicago'">
+    <div *ngFor ="let person of pupil">
+        <div *ngSwitchCase ="person.city" >{{person.sname}} {{person.city}} {{person.age}}</div>
+           <div *ngSwitchDefault>Not Matching</div>
+    </div>
+</div>
+
+
+<div>
+    Id id {{Id}}
+    <div ngSwitch="{{Id%2}}">
+        <div *ngSwitchCase="'0'">
+            I am even
+        </div>
+        <div *ngSwitchCase="'1'">
+            I am odd
+
+        </div>
+
+    </div>
+</div>
+

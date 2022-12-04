@@ -1,0 +1,8 @@
+<div style="">
+  <h1>
+    Welcome to {{data.title}}!
+  </h1>
+  <img width="300" (click)="onLogoClicked()" alt="Angular logo" src="https://angular.io/assets/images/logos/angular/angular.png">
+</div>
+<input class="demo" (keyup)="onKeyup(titleInput.value)" [value]="data.title" #titleInput>
+<!-- this # is called template reference  and this is used to refer to this input in all other parts -->

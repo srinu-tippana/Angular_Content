@@ -1,0 +1,11 @@
+<app-course [parentData]="courseName" (childEvent)="message=$event"></app-course>
+<!-- the parentData variable is in course component and and the coursename is coming from the 
+ the app component so whatever variavle in
+course component in bind it with variable of app component  -->
+
+
+<hr>
+ <br>
+
+ <!-- here we are getting the message from the event  -->
+ <h3>{{message}}</h3>

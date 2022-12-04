@@ -1,0 +1,17 @@
+<p>register works!</p>
+
+<div>
+
+<ul *ngFor="let d of dept">
+
+    <li><button (click)="goToCat()">{{d.id}}</button></li>
+    <!--  we just go that function and that will handle everything from there 
+     -->
+    <!-- here when we click this  it will navigate  to go cat and from there  we can 
+    navigate to the url needed  we wrote the the thing called relativeTO-->
+</ul>
+<br>
+
+<a routerLink="category">Cat</a>
+
+</div>

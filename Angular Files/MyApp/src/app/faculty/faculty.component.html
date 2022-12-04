@@ -1,0 +1,16 @@
+<p>faculty works!</p>
+
+<input [(ngModel)]="facObj.facName" type="text"/>
+<h2>Fac  Name   : :{{facObj.facName}}</h2>
+<h3> Fac Email : :{{facObj.facEmail}}</h3>
+<h3> Face Phone : :{{facObj.contactNo}}</h3>
+
+<hr>
+<br>
+
+
+
+<!-- this below one is template reference variable pass into the template reference and -->
+
+<input #myTmpVar type="text">
+<button (click)="myTmpVarShow(myTmpVar.value)">Click Me</button>

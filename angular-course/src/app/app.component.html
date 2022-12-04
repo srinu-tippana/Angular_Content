@@ -1,0 +1,21 @@
+<div class="top-menu">
+
+    <img class="logo"
+         src="https://angular-academy.s3.amazonaws.com/main-logo/main-page-logo-small-hat.png">
+
+</div>
+
+
+<div class="courses">
+    <course-card   *ngFor="let course of courses;index as i;first as isFirst" 
+        [class.is-first]="isFirst"
+    (courseSelected)="onCourseSelected($event)" 
+       [course]="course" [cardIndex]="i+1" ></course-card>
+    <!-- here course selected is a custom browser event-->
+    <!--  the interface for each course is from course.ts-->
+    <!--  here course come from db-data ts-->
+</div>
+
+
+
+

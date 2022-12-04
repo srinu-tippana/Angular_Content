@@ -1,0 +1,49 @@
+<head>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div>
+    
+    <form #stuForm="ngForm" (ngSubmit)="addStudentContact()">
+    
+
+       
+        <input name="firstname" class="form-control" type="text" placeholder="Enter name" [(ngModel)]="stu.firstname" required>
+        <input name="email" class="form-control" type="email" placeholder="Enter Email" [(ngModel)]="stu.email" required>
+
+
+        <button type="submit"> Add Student Contactnp</button>
+
+
+
+    </form>
+
+    <button (click)="viewAllStudents()">View Students</button>
+
+    <div *ngFor="let s of students">
+
+            {{s.id}}-->{{s.firstname}}-->{{s.email}} <button (click)=" deleteStudent(s.id)">Delete Student</button>
+
+
+    </div>
+
+    <!-- this above code took from studnet and  then started working -->
+
+
+
+
+
+
+
+
+</div>
+
+</body>
